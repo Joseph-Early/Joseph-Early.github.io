@@ -151,3 +151,18 @@ footer li {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* Make the CV height the height of the CV */
+#CV-embed {
+    height: 100vh;
+}
+
+/* Make the CV width the width of the CV */
+#CV-embed {
+    width: 100vw;
+}
+
+/* Make sure the height is never bigger than the CV */
+#CV-embed {
+    max-height: 100%;
+}
