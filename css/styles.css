@@ -1,0 +1,153 @@
+body {
+    background-color: #222222;
+    color: #4ba1ec;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+a {
+    color: #6699cc;
+}
+
+nav {
+    background-color: #222222;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+}
+
+nav a {
+    color: #4ba1ec;
+    text-decoration: none;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    background-color: #222222;
+    padding: 16px;
+    width: 300px;
+}
+
+.rating {
+    color: #6699cc;
+}
+
+footer {
+    background-color: #232323;
+    padding: 16px;
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    nav {
+        justify-content: space-around;
+    }
+
+    .project {
+        width: 450px;
+    }
+}
+
+#about {
+    /* Set the background image (not repeating but scaling) */
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* Set height to half of display */
+    height: 50vh;
+}
+
+#about h1 {
+    color: #4ba1ec;
+    font-size: 3em;
+    margin: 0;
+    padding: 64px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 16px;
+    justify-items: center;
+    padding: 16px;
+}
+
+/* Alternative the background colour for the grid from odd to even */
+.grid>*:nth-child(odd) {
+    background-color: #393838;
+}
+
+.grid>*:nth-child(even) {
+    background-color: #333333;
+}
+
+/* Only show 3 per row */
+@media (min-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.grid>* {
+    display: flex;
+    align-items: center;
+}
+
+.rating {
+    margin-left: 8px;
+}
+
+/* Increase the size of the text and padding */
+.grid>* {
+    font-size: 1.5em;
+    padding: 16px;
+}
+
+/* If screen is small, change grid to list */
+@media (max-width: 800px) {
+    .grid {
+        display: block;
+    }
+}
+
+/* Make footer list display horizontal */
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+/* Add space between list items */
+footer li {
+    margin: 0 64px;
+}
+
+/* If screen is small, change list to vertical */
+@media (max-width: 800px) {
+    footer ul {
+        flex-direction: column;
+    }
+}
+
+#about p {
+    color: #2c96f3;
+    font-size: 1em;
+    margin: 0;
+    padding: 16px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
